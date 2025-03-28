@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ```bash
 dbt build
 ```
-"""
+```
 nys_parking_violations/
                     models/
                     ├── bronze/           # Raw data tables
@@ -39,7 +39,16 @@ nys_parking_violations/
 data
 run_queries.ipynb
 requirements.txt
-"""
+```
+
+Key Features & Limitations
+* Simple data pipeline using DuckDB's in-memory processing
+* Basic data quality tests
+* Minimal documentation using dbt's built-in features
+* Three-layer data warehouse approach
+* Uses sample data (not the complete NYC violations dataset)
+* Basic transformations for demonstration purposes
+* Local DuckDB implementation (not production-grade)
 
 
 
