@@ -1,4 +1,4 @@
-name: run_dbt_prof
+name: run_dbt_prod
 
 on:
   push:
