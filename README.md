@@ -1,26 +1,22 @@
-# Data Engineering Project with DuckDB & dbt  
+# DuckDB and dbt Data Transformation Project
 
-## Overview  
-This project demonstrates a simple **data engineering pipeline** using **dbt (Data Build Tool)** and **DuckDB**. It processes **New York Violation 2013** sample data, transforming it through a structured data warehouse (DWH) model with **bronze, silver, and gold** layers.  
+This project demonstrates a simple data engineering workflow using **DuckDB** and **dbt** to transform New York City parking violation data from 2013. The data is processed in three layers (bronze, silver, gold) with basic tests and documentation.
 
-## Features  
-- **Data Transformation**: Uses `dbt` to clean, structure, and transform raw data.  
-- **Layered Architecture**: Implements **bronze (raw), silver (cleaned), and gold (aggregated)** layers in a `DuckDB` environment.
-- Data Warehouse Layers
-  Bronze: Raw ingestion layer with minimal transformation.
-  Silver: Cleaned and structured data, with necessary formatting applied.
-  Gold: Aggregated data for reporting and analytics.
-- **Testing & Documentation**: Runs **basic `dbt` tests** and includes **documentation** for clarity.  
+## Project Overview
 
-## Project Structure  
-```plaintext
-duckdb-dbt-project/  
-│-- models/                # dbt models (Bronze, Silver, Gold layers)  
-│-- tests/                 # dbt tests for data validation  
-│-- snapshots/             # Snapshot configuration (if applicable)  
-│-- dbt_project.yml        # dbt project settings  
-│-- README.md              # Project documentation
-data
-run_queries.ipynb
-```
+- **Source Data**: Sample NYC Parking Violations (2013)
+- **Tools Used**:
+  - DuckDB (in-memory analytical database)
+  - dbt (data transformation)
+- **Layers**:
+  - **Bronze**: Raw data ingestion
+  - **Silver**: Cleaned and standardized data
+  - **Gold**: Business-ready aggregates and final tables
 
+## Setup Instructions
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/IslamMammadov/duckdb-dbt-project.git
+   cd duckdb-dbt-project
+   ```
