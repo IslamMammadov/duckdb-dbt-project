@@ -20,3 +20,25 @@ This project demonstrates a simple data engineering workflow using **DuckDB** an
    git clone https://github.com/IslamMammadov/duckdb-dbt-project.git
    cd duckdb-dbt-project
    ```
+2. **Install requirements**:
+```bash
+pip install -r requirements.txt
+```
+3. **Run the project**:
+```bash
+dbt build
+```
+nys_parking_violations/
+                    models/
+                    ├── bronze/           # Raw data tables
+                    ├── silver/           # Cleaned and transformed tables
+                    └── gold/             # Final business-ready models
+                    tests/                # Data quality tests
+                    docs/                 # Project documentation
+data
+run_queries.ipynb
+requirements.txt
+
+
+
+
