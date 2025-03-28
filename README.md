@@ -28,6 +28,7 @@ pip install -r requirements.txt
 ```bash
 dbt build
 ```
+"""
 nys_parking_violations/
                     models/
                     ├── bronze/           # Raw data tables
@@ -38,6 +39,7 @@ nys_parking_violations/
 data
 run_queries.ipynb
 requirements.txt
+"""
 
 
 
