@@ -1,0 +1,38 @@
+name: run_dbt_prof
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+#schedule
+# - cron:'0 8 * * *'
+
+env:
+  DBT_PROFILES_DIR: ./nys_parking_violations
+  DBT_PROJECT_DIR: ./nys_parking_violations
+
+jobs:
+  build:
+
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v3
+        with: 
+          python-version: "3.10"
+      - name: Install depentencies
+        run: | 
+          python -m pip install --upgrade pip
+          if [ -f reqirements.txt ]; then pip install -r reqirements.txt; fi
+      - name: Run dbt prod
+        run: |
+          dbt debug
+          dbt compile --target prod
+          dbt run --target prod
+      - name: Test dbt prod
+        run: |
+          dbt test --target prod 
